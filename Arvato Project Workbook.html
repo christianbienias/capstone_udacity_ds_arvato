@@ -13171,20 +13171,6 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#azdias = pd.read_csv (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\azdias.csv&#39;, low_memory=False)</span>
-<span class="c1">#customers = pd.read_csv (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\customers.csv&#39;, low_memory=False)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14425,8 +14411,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># upload and simple adjustments of the dataset &#39;DIAS Information Levels - Attributes 2017.xlsx&#39;</span>
-<span class="c1">#attribuets_desc = pd.read_excel(&#39;DIAS Information Levels - Attributes 2017.xlsx&#39;, skiprows=[0])</span>
-<span class="n">attribuets_desc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\DIAS Information Levels - Attributes 2017.xlsx&#39;</span><span class="p">,</span><span class="n">engine</span><span class="o">=</span><span class="s1">&#39;openpyxl&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">attribuets_desc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;DIAS Information Levels - Attributes 2017.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">attribuets_desc</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">attribuets_desc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -14524,7 +14509,6 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># upload and simple adjustments of the dataset &#39;DIAS Attributes - Values 2017.xlsx&#39;</span>
 <span class="n">attributes_values</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;DIAS Attributes - Values 2017.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="c1">#attributes_values = pd.read_excel (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\DIAS Attributes - Values 2017.xlsx&#39;,engine=&#39;openpyxl&#39;, skiprows=[0])</span>
 <span class="n">attributes_values</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">attributes_values</span><span class="p">[</span><span class="s1">&#39;Attribute&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attributes_values</span><span class="p">[</span><span class="s1">&#39;Attribute&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
 <span class="n">attributes_values</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attributes_values</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
@@ -15535,10 +15519,9 @@ div#notebook {
     
     <span class="c1">#Dropping columns that are not described in DIAS Information Levels &amp; Values.xlsx</span>
     <span class="n">attribuets_desc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;DIAS Information Levels - Attributes 2017.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="c1">#attribuets_desc = pd.read_excel (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\DIAS Information Levels - Attributes 2017.xlsx&#39;,engine=&#39;openpyxl&#39;, skiprows=[0])</span>
+    
     <span class="n">attribuets_desc</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">attributes_values</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;DIAS Attributes - Values 2017.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="c1">#attributes_values = pd.read_excel (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\DIAS Attributes - Values 2017.xlsx&#39;,engine=&#39;openpyxl&#39;, skiprows=[0])</span>
     <span class="n">attributes_values</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">attribuets_desc_unique</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">attribuets_desc</span><span class="o">.</span><span class="n">Attribute</span><span class="p">))</span>
     <span class="n">attributes_values_unique</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">attributes_values</span><span class="o">.</span><span class="n">Attribute</span><span class="p">))</span>
@@ -16701,19 +16684,6 @@ VERS_TYP                                                   insurance typology
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loading the train data</span>
 <span class="n">mailout_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/Term2/capstone/arvato_data/Udacity_MAILOUT_052018_TRAIN.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#mailout_train = pd.read_csv (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\Udacity_MAILOUT_052018_TRAIN.csv&#39;)</span>
 </pre></div>
 
     </div>
@@ -19680,19 +19650,6 @@ XGBClassifier(base_score=0.5, booster=&#39;gbtree&#39;, colsample_bylevel=1,
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mailout_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/Term2/capstone/arvato_data/Udacity_MAILOUT_052018_TEST.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#mailout_test = pd.read_csv (r&#39;C:\Users\chris\OneDrive\Desktop\Data Scientist\Udacity_capstone\Udacity_MAILOUT_052018_TEST.csv&#39;)</span>
 </pre></div>
 
     </div>
