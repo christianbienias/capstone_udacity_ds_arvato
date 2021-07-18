@@ -47,7 +47,7 @@ Each row of the demographics files represents a single person, but also includes
 
 
 ## Results <a name="results"></a>
-Following concepts implemented and covered in detail in the notebook: 
+Following concepts implemented and covered in detail in the notebook or blogpost: 
 #### Get to Know the Data
 #### Data Cleaning
 * Missing Values
