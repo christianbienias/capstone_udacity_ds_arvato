@@ -14,8 +14,7 @@ Follow this [link](https://chris-b.medium.com/customer-segmentation-report-for-a
 
 
 ## Project Overview<a name="overview"></a>
-“A Customer Segmentation Report for Arvato Financial Solutions” was one of the proposed projects for the Machine Learning Engineer Nanodegree Program by the Udacity. The main objective of the project is to determine the descriptive portrait of the potential customer and are chances that a new person from the targeted mailout campaign could become a new customer.
-Arvato has provided several dataset files that have demographic information about the general population of Germany, current customers of the company, targeted mailout campaign outcomes, and two files with a description of the demographic features.
+The analyze of demographics data for customers of a mail-order sales company in Germany is in focus, comparing it against demographics information for the general population. There will be used unsupervised learning techniques to perform customer segmentation, identifying the parts of the population that best describe the core customer base of the company. Then, with the information of a third dataset with demographics information for targets of a marketing campaign for the company is used to predict which individuals are most likely to convert into becoming customers for the company. The used data has been provided by Bertelsmann Arvato Analytics, and represents a real-life data science task.
 
 The project is divided into following subtasks:
 1.	Part 0: Get to Know the Data;
