@@ -48,23 +48,23 @@ Each row of the demographics files represents a single person, but also includes
 
 ## Results <a name="results"></a>
 Following concepts implemented and covered in detail in the notebook: 
-### Get to Know the Data
-### Data Cleaning
+#### Get to Know the Data
+#### Data Cleaning
 * Missing Values
 * Differences between Azdias & Customers
 * Replacing unknown Values with NaN
 * Re-encode Features
 * Impute NaN & Scale the Data
-### Customer Segmentation Report
+#### Customer Segmentation Report
 * The PCA Method
 * The Elbow Method
 * Kmeans Clustering
 * Deep Dive in most affected Cluster
-### Supervised Learning Model
+#### Supervised Learning Model
 * Starting point
 * Selection of the best model
 * Hypertuning of the selected model
-### Summary and potential for improvement
+#### Summary and potential for improvement
 
 
 ## Licensing and Acknowledgements<a name="licensing"></a>
